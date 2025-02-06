@@ -42,13 +42,79 @@ public class BufferedReaderTest {
 //        }
 
         //ABCDE
-        {
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            String str = br.readLine(); //"ABCDE"
+//        {
+//            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//            String str = br.readLine(); //"ABCDE"
+//
+//            char[] input = str.toCharArray();
+//
+//            System.out.println(Arrays.toString(input));
+//        }
 
-            char[] input = str.toCharArray();
+        //5
+        //ABCDE
+//        {
+//            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//            int N = Integer.parseInt(br.readLine());
+//            char[] input = br.readLine().toCharArray();
+//
+//            System.out.println(N);
+//            System.out.println(Arrays.toString(input));
+//        }
 
-            System.out.println(Arrays.toString(input));
-        }
+        //첫 라인에서 읽은 N만큼 가로 세로가 N인 2차원 배열
+//        {
+//            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//            int N = Integer.parseInt(br.readLine());
+//
+//            int[][] input = new int[N][N];
+//
+//            for (int i = 0; i < N; i++) {
+//                String str = br.readLine();
+//                StringTokenizer st = new StringTokenizer(str);
+//                for (int j = 0; j < N; j++) {
+//                    input[i][j] = Integer.parseInt(st.nextToken());
+//                }
+//            }
+//            System.out.println(N);
+//
+//            for (int i = 0; i < N; i++) {
+//                for (int j = 0; j < N; j++) {
+//                    System.out.print(input[i][j]+" ");
+//                }
+//                System.out.println();
+//            }
+//        }
+        //첫 줄에 가로, 세로 각각 주어졌을 때
+//        {
+//            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//            int N = Integer.parseInt(br.readLine());
+//            int M = Integer.parseInt(br.readLine());
+//
+//            int[][] input = new int[N][M];
+//
+//            for (int i = 0; i < N; i++) {
+//                String str = br.readLine();
+//                StringTokenizer st = new StringTokenizer(str);
+//                for (int j = 0; j < M; j++) {
+//                    input[i][j] = Integer.parseInt(st.nextToken());
+//                }
+//            }
+//            System.out.println(N+"X"+M);
+//
+//            for (int i = 0; i < N; i++) {
+//                for (int j = 0; j < M; j++) {
+//                    System.out.print(input[i][j]+" ");
+//                }
+//                System.out.println();
+//            }
+//        }
+
+        //출력에 대한 자료구조
+        //입력 자료 >> 출력 자료
+        //출력 자료구조가 간단한 정수정도면 별도의 자료 구조 X
+        //출력이 문자열이고 크기가 계속 증가한다
+        // -BufferedWriter : 코드가 길다
+        // -StringBuilder : 코드가 짧다
     }
 }

@@ -1,4 +1,4 @@
-package PrintStar;
+package basic;
 
 import java.util.Scanner;
 
