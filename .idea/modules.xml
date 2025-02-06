@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Algorithm/Algorithm.iml" filepath="$PROJECT_DIR$/Algorithm/Algorithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Baekjoon/Baekjoon.iml" filepath="$PROJECT_DIR$/Baekjoon/Baekjoon.iml" />
       <module fileurl="file://$PROJECT_DIR$/DesignPattern/DesignPattern.iml" filepath="$PROJECT_DIR$/DesignPattern/DesignPattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaBasic/JavaBasic.iml" filepath="$PROJECT_DIR$/JavaBasic/JavaBasic.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/LgUplus_Eureka.iml" filepath="$PROJECT_DIR$/.idea/LgUplus_Eureka.iml" />
