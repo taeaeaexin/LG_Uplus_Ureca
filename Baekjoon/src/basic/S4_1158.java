@@ -1,5 +1,7 @@
 package basic;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class S4_1158 {
@@ -7,38 +9,20 @@ public class S4_1158 {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         int K = sc.nextInt();
-        int[] result = new int[N];
-        int live = N;
-        int die = 0;
+        int[] arr = new int[N];
+        Queue<Integer> people = new LinkedList<>();
 
-        int point = K;
-        int cnt = 0;
-        while(live > 0){
-            result[cnt] = point;
-
-            int count = 0;
-            while(count < 3){
-                boolean flag = true;
-                for (int i = 0; i < N; i++) {
-                    if(result[i] == point){
-                        flag = false;
-                    }
-                }
-                if(flag){
-                    count++;
-                    point++;
-                }
-            }
-
-            live--;
-            die++;
+        System.out.print("<");
+        for (int i = 1; i <= N; i++) {
+            people.add(i);
         }
 
-        //출력
-        System.out.print("<");
-        for (int i = 0; i < N; i++) {
-            System.out.print(result[i]);
-            if (i != N - 1) {
+        while(!people.isEmpty()) {
+            for (int i = 0; i < K-1; i++) {
+                people.add(people.poll());
+            }
+            System.out.print(people.poll());
+            if (!people.isEmpty()) {
                 System.out.print(", ");
             }
         }
