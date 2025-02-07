@@ -1,4 +1,4 @@
-package basic.array;
+package basic.Ch02_array;
 
 public class Array1 {
     public static void main(String[] args) {

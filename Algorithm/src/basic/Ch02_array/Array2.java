@@ -1,4 +1,4 @@
-package basic.array;
+package basic.Ch02_array;
 
 public class Array2 {
     //Circular Array

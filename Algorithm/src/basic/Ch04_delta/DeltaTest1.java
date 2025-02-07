@@ -1,4 +1,4 @@
-package basic.delta;
+package basic.Ch04_delta;
 
 import java.util.Arrays;
 
@@ -22,7 +22,6 @@ public class DeltaTest1 {
         int y = 2;
         int x = 2;
 
-        System.out.println(map[y][x]);
         print4x(y, x);
     }
 
@@ -40,9 +39,10 @@ public class DeltaTest1 {
 
             //새로운 좌표 ny, nx는 배열의 범위를 벗어날 수 있따. 이에 대한 장치 필요
             if(ny < 0 || nx < 0 || ny >= 5 || nx >= 5) continue; //범위를 벗어난 좌표 무시
-
             System.out.println(map[ny][nx]);
         }
-
     }
+    //문제 : 상하좌우로 이동할 수 있따
+    //문제 : 맨 위부터 탐식 시계 방향으로
+    //문제 : 대각선, 8방, 장기의 말 이동
 }

@@ -1,4 +1,4 @@
-package basic.input;
+package basic.Ch03_input;
 
 import java.util.Arrays;
 import java.util.Scanner;

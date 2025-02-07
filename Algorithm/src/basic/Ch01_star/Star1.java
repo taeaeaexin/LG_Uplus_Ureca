@@ -1,4 +1,4 @@
-package basic.star;
+package basic.Ch01_star;
 
 public class Star1 {
     public static void main(String[] args) {
