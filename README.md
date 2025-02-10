@@ -63,6 +63,17 @@
 
 ## 2. 알고리즘
 ### Part 01 | Basic
+#### Chapter 01 Print Star
+#### Chapter 02 Array
+#### Chapter 03 Input
+#### Chapter 04 Delta
+#### Chapter 05 Recursive
+#### Chapter 06 Sort
+#### Chapter 07 Permutations
+#### Chapter 08 Combinations
+#### Chapter 09 Subset
+#### Chapter 10 Stack & Queue
+
 
 <br/>
 
