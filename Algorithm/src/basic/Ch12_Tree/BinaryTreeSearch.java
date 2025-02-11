@@ -56,8 +56,7 @@ public class BinaryTreeSearch {
         // 현재 노드의 자식 노드 방문
         // 왼쪽
         dfs(idx*2);
-        // 오른족
+        // 오른쪽
         dfs(idx*2 + 1);
     }
 }
-
