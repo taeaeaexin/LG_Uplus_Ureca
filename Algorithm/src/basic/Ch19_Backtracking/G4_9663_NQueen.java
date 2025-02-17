@@ -3,7 +3,7 @@ package basic.Ch19_Backtracking;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class G5_9663_NQueen {
+public class G4_9663_NQueen {
     static int N;
     static int result;
     static boolean[][] queen;
