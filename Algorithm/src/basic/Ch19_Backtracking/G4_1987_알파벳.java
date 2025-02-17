@@ -13,17 +13,18 @@ public class G4_1987_알파벳 {
     static int[] dx = {0, 0, -1, 1};
 
     public static void main(String[] args) throws Exception {
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(bf.readLine());
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
         R = Integer.parseInt(st.nextToken());
         C = Integer.parseInt(st.nextToken());
         arr = new char[R][C];
 
-        for (int i = 0; i < R; i++) arr[i] = bf.readLine().toCharArray();
+        for (int i = 0; i < R; i++) arr[i] = br.readLine().toCharArray();
 
         backtrack(0, 0, 1);
         System.out.println(result);
+        br.close();
     }
 
     public static void backtrack(int y, int x, int cnt){
