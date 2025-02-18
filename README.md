@@ -1,5 +1,7 @@
 # LG U+ URECA 2기 (백엔드과정)
 
+---
+
 ## 목차
 #### [소프트웨어 엔지니어링](#1-소프트웨어-엔지니어링)
 #### [알고리즘](#2-알고리즘)
@@ -17,7 +19,7 @@
 #### [종합프로젝트](#14-종합프로젝트)
 #### [최종 융합 프로젝트](#15-최종-융합-프로젝트)
 
-<br/>
+---
 
 ## 1. 소프트웨어 엔지니어링
 ### Part 01 | 자바 언어의 기초
@@ -59,21 +61,23 @@
 ### Part 05 | 최신 자바의 강화된 언어 기능
 #### Chapter 21 자바 21에서 강화된 언어 및 라이브러리
 
-<br/>
+---
 
 ## 2. 알고리즘
-### Part 01 | Basic
-#### Chapter 01 Print Star
-#### Chapter 02 Array
-#### Chapter 03 Input
-#### Chapter 04 Delta
-#### Chapter 05 Recursive
-#### Chapter 06 Sort
-#### Chapter 07 Permutations
-#### Chapter 08 Combinations
-#### Chapter 09 Subset
-#### Chapter 10 Stack & Queue
+### Part 01 | 배열
+#### Chapter 01 배열
+#### Chapter 02 ArrayList
 
+<br/>
+
+### Part 02 | 스택
+### Part 03 | 큐
+### Part 04 | 해시
+### Part 05 | 트리
+### Part 06 | 집합
+### Part 07 | 그래프
+### Part 08 | 백트래킹
+### Part 09 | 시뮬레이션
 
 <br/>
 
