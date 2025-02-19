@@ -12,25 +12,20 @@ public class S2_1260_dfs_bfs {
         StringTokenizer st = new StringTokenizer(br.readLine()," ");
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
-        int V = Integer.parseInt(st.nextToken());
 
         list = new ArrayList<>();
-        for (int i = 1 ; i <= N; i++) list.add(new ArrayList<>());
+
+        for (int i = 0; i <= N; i++) list.add(new ArrayList<>());
 
         for (int i = 0; i < M; i++) {
             st = new StringTokenizer(br.readLine()," ");
-            int a = Integer.parseInt(st.nextToken());
-            int b = Integer.parseInt(st.nextToken());
+            int a = Integer.parseInt(br.readLine());
+            int b = Integer.parseInt(br.readLine());
             list.get(a).add(b);
             list.get(b).add(a);
         }
 
-        for (int i = 0; i < list.size(); i++) {
-            for (int j = 0; j < list.get(i).size(); j++) {
-                System.out.print(list.get(i).get(j)+" ");
-            }
-            System.out.println();
-        }
+
 
     }
 }
