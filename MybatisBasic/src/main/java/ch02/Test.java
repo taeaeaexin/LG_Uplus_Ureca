@@ -1,4 +1,4 @@
-package ch01;
+package ch02;
 
 import java.io.Reader;
 import java.util.List;
@@ -8,8 +8,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import ch01.dao.BookDao;
-import ch01.dto.BookDto;
+import ch02.dao.BookDao;
+import ch02.dto.BookDto;
 
 // 1. mybatis 의존성 추가
 // 2. mybatis 설정 (xml, java)
@@ -18,12 +18,12 @@ import ch01.dto.BookDto;
 
 // mybatis 는 SqlSession 통해서 DB 와 연동
 
-// ch02는 xml mapper 사용 X, Dao에 annotaion으로 대체 <= Mybatis-config.xml 변경 <= Mybatis-config-2.xml
+// ch02 는 xml mapper 사용 X, Dao 에 annotation 으로 대체 <= mybatis-config.xml 변경 <= mybatis-config-2.xml
 public class Test {
 
 	public static void main(String[] args) throws Exception{
 		// mybatis 설정 파일을 읽고 정보는 저장하는 reader 객체 생성
-		Reader reader = Resources.getResourceAsReader("config/mybatis-config-2.xml");
+		Reader reader = Resources.getResourceAsReader("config/mybatis-config-2.xml"); 
 		
 		// SqlSessionFactory 를 Builder 패턴으로 생성
 		SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
@@ -34,41 +34,41 @@ public class Test {
 		
 		// mybatis 로 DB 연동 작업 진행
 		// 목록
-//		{
-//			List<BookDto> bookList = bookDao.listBook();
-//			for (BookDto bookDto : bookList) {
-//				System.out.println(bookDto);
-//			}
-//		}
-
+		{
+			List<BookDto> bookList = bookDao.listBook();
+			for (BookDto bookDto : bookList) {
+				System.out.println(bookDto);
+			}
+		}
+		
 		// 상세
 //		{
 //			BookDto bookDto = bookDao.detailBook(1);
 //			System.out.println(bookDto);
-//		}
-
+//		}	
+		
 		// 등록
 //		{
 //			BookDto bookDto = new BookDto(11, "11번째 책", "11 출판사", 20000);
 //			int ret = bookDao.insertBook(bookDto);
 //			System.out.println(ret);
-//			session.commit(); // 등록, 수정, 삭제는 commit() 필요
-//		}
-
+//			session.commit(); // 등록,수정,삭제는 commit() 필요
+//		}	
+		
 		// 수정
 //		{
-//			BookDto bookDto = new BookDto(11, "11번째 책 수정", "11 출판사 수정", 20000);
+//			BookDto bookDto = new BookDto(11, "11번째 책 수정", "11 출판사 수정", 30000);
 //			int ret = bookDao.updateBook(bookDto);
 //			System.out.println(ret);
-//			session.commit(); // 등록, 수정, 삭제는 commit() 필요
-//		}
-
+//			session.commit(); // 등록,수정,삭제는 commit() 필요
+//		}	
+		
 		// 삭제
-		{
-			int ret = bookDao.deleteBook(11);
-			System.out.println(ret);
-			session.commit(); // 등록, 수정, 삭제는 commit() 필요
-		}
+//		{
+//			int ret = bookDao.deleteBook(11);
+//			System.out.println(ret);
+//			session.commit(); // 등록,수정,삭제는 commit() 필요
+//		}
 		session.close();
 	}
 
