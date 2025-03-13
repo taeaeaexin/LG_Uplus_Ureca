@@ -1,4 +1,4 @@
-package org.mybatis;
+package org.JPA;
 
 public class Main {
     public static void main(String[] args) {
