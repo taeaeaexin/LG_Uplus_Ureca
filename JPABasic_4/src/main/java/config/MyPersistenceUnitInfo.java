@@ -1,7 +1,6 @@
 package config;
 
 import com.zaxxer.hikari.HikariDataSource;
-import jakarta.persistence.Id;
 import jakarta.persistence.SharedCacheMode;
 import jakarta.persistence.ValidationMode;
 import jakarta.persistence.spi.ClassTransformer;
