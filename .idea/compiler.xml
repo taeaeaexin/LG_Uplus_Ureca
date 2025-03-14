@@ -11,6 +11,7 @@
         <module name="JPABasic_1" />
         <module name="JPABasic_2" />
         <module name="JPABasic_3" />
+        <module name="MongoDBBasic_BookManager" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
