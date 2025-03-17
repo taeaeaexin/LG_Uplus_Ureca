@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/backend" method="post">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="abc"> <!-- request.getParameter("abc") -->
+    </form>
+
+    <br>
+
+    <label for="cars">Choose a car:</label>
+
+    <select id="cars" name="cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="fiat">Fiat</option>
+      <option value="audi">Audi</option>
+    </select>
+
+    <br>
+
+    <textarea name="message" rows="10" cols="30">
+    </textarea>
+
+    <br>
+
+    <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+    <input type="button" value="click Me!" onclick="alert('Hello World')">
+    <input type="submit" value="submit">
+</body>
+</html>
