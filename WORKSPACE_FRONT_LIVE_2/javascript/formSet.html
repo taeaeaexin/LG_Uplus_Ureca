@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <form id="registerForm" action="">
+            <label for="userName">이름</label><br />
+            <input id="userName" type="text" /><br />
+            <label for="userEmail">e-mail</label><br />
+            <input id="userEmail" type="email" /><br />
+            <label>성별</label><br />
+            <input id="male" type="radio" name="gender" value="M" /><label for="male">남</label>
+            <input id="female" type="radio" name="gender" value="F" checked /><label for="female">여</label><br />
+            <label>취미</label><br />
+            <input id="movie" type="checkbox" name="hobby" value="movie" />
+            <label for="movie">영화</label>
+            <input id="sport" type="checkbox" name="hobby" value="sport" checked />
+            <label for="sport">스포츠</label>
+            <input id="mung" type="checkbox" name="hobby" value="mung" />
+            <label for="mung">멍때리기</label>
+            <br />
+            <label for="major">전공</label>
+            <select name="major" id="major" multiple> <!-- multiple-->
+                <!-- multiple -->
+                <option value="CS">Computer Science</option>
+                <option value="HI" selected>History</option>
+                <option id="KL" value="KL">Korean Language</option>
+            </select>
+            <br />
+            <label for="desc">기타</label><br />
+            <textarea name="desc" id="desc" cols="30" rows="10"></textarea>
+        </form>
+        <br />
+        <input id="btnRegister" type="button" value="가입하기" />
+        <hr>
+        <label for="userData">사용자 정보</label><br>
+        <input id="userData" type="text"/><br>
+        <button id="setName">이름</button> <button id="setEmail">e-mail</button> <button id="setDesc">기타</button>
+        <br>
+        <button id="setMale">남</button> <button id="setFemale">여</button>
+        <br>
+        <button id="setMovieOn">영화 On</button> <button id="setMovieOff">영화 Off</button> 
+        <button id="setSportOn">스포츠 On</button> <button id="setSportOff">스포츠 Off</button>
+        <button id="setMungOn">멍 On</button> <button id="setMungOff">멍 Off</button>
+        <button id="setHobbyAllOn">취미 전체 On</button> <button id="setHobbyAllOff">취미 전체 Off</button>
+        <br>
+        <button id="setCSOn">Computer Science On</button> <button id="setCSOff">Computer Science Off</button> 
+        <button id="setHIOn">History On</button> <button id="setHIOff">History Off</button> 
+        <button id="setKLOn">한국어 On</button> <button id="setKLOff">한국어 Off</button>
+        <button id="setMajorAllOn">전공 전체 On</button> <button id="setMajorAllOff">전공 전체 Off</button>
+    </div>
+    <script>
+        // 이미 문서의 마지막에 script 를 넣고 있지만, 조금 더 안전한 ( dom 문서의 처리가 완료된 후 실행 ) 방법
+        
+        window.onload = function(){
+            // name, email, 기타
+            document.querySelector("#setName").onclick = function() {
+                document.querySelector("#userName").value = document.querySelector("#userData").value;
+            }
+            document.querySelector("#setEmail").onclick = function() {
+                document.querySelector("#userEmail").value = document.querySelector("#userData").value;
+            }
+            document.querySelector("#setDesc").onclick = function() {
+                document.querySelector("#desc").value = document.querySelector("#userData").value;
+            }
+            // radio 남,녀
+            document.querySelector("#setMale").onclick = function() {
+                document.querySelector("#male").checked = true;  // female 은 자동으로 false 처리된다.
+            }
+            document.querySelector("#setFemale").onclick = function() {
+                document.querySelector("#female").checked = true;  // male 은 자동으로 false 처리된다.
+            }
+            // checkbox 취미
+            document.querySelector("#setMovieOn").onclick = function() {
+                document.querySelector("#movie").checked = true;  // 개별적으로 true, false 처리
+            }
+            document.querySelector("#setMovieOff").onclick = function() {
+                document.querySelector("#movie").checked = false;  // 개별적으로 true, false 처리
+            }
+            document.querySelector("#setSportOn").onclick = function() {
+                document.querySelector("#sport").checked = true;  // 개별적으로 true, false 처리
+            }
+            document.querySelector("#setSportOff").onclick = function() {
+                document.querySelector("#sport").checked = false;  // 개별적으로 true, false 처리
+            }
+            document.querySelector("#setMungOn").onclick = function() {
+                document.querySelector("#mung").checked = true;  // 개별적으로 true, false 처리
+            }
+            document.querySelector("#setMungOff").onclick = function() {
+                document.querySelector("#mung").checked = false;  // 개별적으로 true, false 처리
+            }
+            // checkbox 취미 전체
+            document.querySelector("#setHobbyAllOn").onclick = function() {
+                document.querySelectorAll("input[name='hobby']").forEach( el => el.checked = true );
+            }
+            document.querySelector("#setHobbyAllOff").onclick = function() {
+                document.querySelectorAll("input[name='hobby']").forEach( el => el.checked = false );
+            }
+            // select 전공 
+            // checked X, selected O
+            document.querySelector("#setCSOn").onclick = function() {
+                document.querySelector("#major option[value='CS']").selected = true; 
+            }
+            document.querySelector("#setCSOff").onclick = function() {
+                document.querySelector("#major option[value='CS']").selected = false; 
+            }
+            document.querySelector("#setHIOn").onclick = function() {
+                document.querySelector("#major option[value='HI']").selected = true; 
+            }
+            document.querySelector("#setHIOff").onclick = function() {
+                document.querySelector("#major option[value='HI']").selected = false; 
+            }
+            document.querySelector("#setKLOn").onclick = function() {
+                document.querySelector("#major option[value='KL']").selected = true; 
+            }
+            document.querySelector("#setKLOff").onclick = function() {
+                document.querySelector("#major option[value='KL']").selected = false; 
+            }
+            // select 전공 전체
+            document.querySelector("#setMajorAllOn").onclick = function() {
+                document.querySelectorAll("#major option").forEach( el => el.selected = true );
+            }
+            document.querySelector("#setMajorAllOff").onclick = function() {
+                document.querySelectorAll("#major option").forEach( el => el.selected = false );
+            }
+        }
+    </script>
+</body>
+</html>

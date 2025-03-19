@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let data = [1, 2, 3];
+        function getData(){
+            // backend 에 데이터를 요청하고 받는 것을 흉내
+            // delay
+            // 비동기 처리 부분을 Promise 객체를 통해서 저리
+            return new Promise( ( resolve, reject ) => {
+                setTimeout( () => {
+                    data.push(4);
+                    data.push(5);
+                    // 성공 (resolve 호출), 실패 (reject 호출)
+                    resolve();
+                }, 1000);
+            } );
+        }
+        function printData(){
+            data.forEach( n => console.log( n ) );
+        }
+        // 아래 비동기 처리 함수를 호출하는 방식을 조금 더 가독성 있게 변경
+        // async await
+        // getData()
+        //     .then(printData)
+        //     .catch( e => console.log(e));;
+        async function doIt(){
+            try{
+                await getData();
+                printData();
+            }catch( e ){
+                console.log(e);
+            }
+        }
+        doIt();
+    </script>
+</body>
+</html>
