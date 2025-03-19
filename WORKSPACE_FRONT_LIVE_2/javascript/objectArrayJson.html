@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Array Json</title>
+</head>
+<body>
+    <script>
+        // object {}
+        let student = { name: "홍길동", phone: '010-0000-0000', age: 30 }
+        // array [, , ]
+        let students = [ { name: "홍길동", phone: '010-0000-0000', age: 30 }, { name: "이길동", phone: '010-2222-2222', age: 20 }] ;
+        let numbers = [1, 2, 3, 4];
+        let strs = ["111", "222", "333"];
+        // javascript type 
+        // var, let, const
+        num = 10; // default var
+        let num2 = 20; // let
+        const num3 = 30; // const
+        // num3 = 33; // 상수 type 에 값 재지정 오류
+        // type 별 scope
+        var num = 40; // var 는 scope 이 없으므로 오류 발생 X
+        // let num2 = 50; // 동일 scope 동일 변수로 오류 발생
+        // const num3 = 40; // 동일 scope 동일 변수로 오류 발생
+        // type 별 scope 2
+        // java 등과 달리 하위 scope 을 새로운 scope 로 간주, 아래 코드는 오류 발생 X
+        {
+            let num2 = 50;
+            const num3 = 40;
+        }
+        // json <= javascript object 표현을 따른 문자열
+        // javascript object, array --> json 
+        let studentJson = JSON.stringify(student);
+        console.log( student );
+        console.log( studentJson ); // {"name":"홍길동","phone":"010-0000-0000","age":30}
+        let studentsJson = JSON.stringify(students);
+        console.log( students );
+        console.log( studentsJson ); // [{"name":"홍길동","phone":"010-0000-0000","age":30},{"name":"이길동","phone":"010-2222-2222","age":20}]
+        // json --> javascript object, array
+        let student2 = JSON.parse(studentJson);
+        let students2 = JSON.parse(studentsJson);
+        console.log(student2);
+        console.log(students2);
+    </script>
+</body>
+</html>
