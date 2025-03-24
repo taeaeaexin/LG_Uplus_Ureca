@@ -6,12 +6,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="JPABasic_4" />
-        <module name="JPABasic_JPQL" />
-        <module name="JPABasic_1" />
-        <module name="JPABasic_2" />
-        <module name="JPABasic_3" />
-        <module name="MongoDBBasic_BookManager" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
