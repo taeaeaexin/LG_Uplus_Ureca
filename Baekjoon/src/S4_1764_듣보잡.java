@@ -1,33 +1,35 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayDeque;
-import java.util.Arrays;
-import java.util.StringTokenizer;
+import java.io.*;
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class S4_1764_듣보잡 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        BufferedWriter bw = new BufferedWriter((new OutputStreamWriter(System.out)));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
-        ArrayDeque<String> arr = new ArrayDeque<>();
-        String[] name = new String[N];
 
-        int count = 0;
+        HashSet<String> hash = new HashSet<>();
+        ArrayList<String> list = new ArrayList<>();
 
-        for (int i = 0; i < N; i++) name[i] = br.readLine();
-        for (int i = 0; i < M; i++) {
+        for (int i = 0; i < N; i++) hash.add(br.readLine());
+        while(M-- > 0) {
             String str = br.readLine();
-            if(Arrays.asList(name).contains(str)){
-                arr.add(str);
-                count++;
+            if(hash.contains(str)){
+                list.add(str);
             }
         }
 
-        System.out.println(count);
-        while (!arr.isEmpty()){
-            System.out.println(arr.poll());
+        Collections.sort(list);
+        bw.write(list.size()+"\n");
+        for (String str:list){
+            bw.write(str+"\n");
         }
+
+        bw.flush();
+        br.close();
+        bw.close();
     }
 }
