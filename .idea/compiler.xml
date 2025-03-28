@@ -6,6 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="MybatisBasic (5)" />
+        <module name="MybatisBasic (2)" />
+        <module name="MybatisBasic (1)" />
+        <module name="JPABasic_1" />
+        <module name="MybatisBasic (4)" />
+        <module name="MybatisBasic (3)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
