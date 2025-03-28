@@ -1,44 +1,46 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.StringTokenizer;
 
 public class S5_11723_집합 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
         int M = Integer.parseInt(br.readLine());
-        boolean[] num = new boolean[21];
+        int num = 0;
+
         for (int i = 0; i < M; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine(), " ");
             String str = st.nextToken();
-            int n = Integer.parseInt(st.nextToken());
+            int n = 0;
             switch (str) {
                 case "add":
-                    num[n] = true;
+                    n = Integer.parseInt(st.nextToken());
+                    num |= (1 << n-1);
                     break;
                 case "remove":
-                    num[n] = false;
+                    n = Integer.parseInt(st.nextToken());
+                    num &= ~(1 << n-1);
                     break;
                 case "check":
-                    if (num[n]) System.out.println(1);
-                    else System.out.println(0);
+                    n = Integer.parseInt(st.nextToken());
+                    bw.write(((num & (1 << (n - 1))) > 0) ? "1\n" : "0\n");
                     break;
                 case "toggle":
-                    if (num[n]) num[n] = false;
-                    else num[n] = true;
+                    n = Integer.parseInt(st.nextToken());
+                    num ^= (1 << (n - 1));
                     break;
                 case "all":
-                    for (int j = 1 ; j <= 20; j++) {
-                        num[j] = true;
-                    }
+                    num = (1 << 20)-1;
                     break;
                 case "empty":
-                    for (int j = 1 ; j <= 20 ; j++) {
-                        num[j] = false;
-                    }
+                    num = 0;
                     break;
             }
         }
+        bw.flush();
+        br.close();
+        bw.close();
     }
 
 }
