@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Algorithm/src"/>
+	<classpathentry kind="src" path="Baekjoon/src"/>
+	<classpathentry kind="src" path="DataBase/src"/>
+	<classpathentry kind="src" path="DesignPattern/src"/>
+	<classpathentry kind="src" path="JavaBasic/src"/>
+	<classpathentry kind="src" path="JPABasic_1/src/main/java"/>
+	<classpathentry kind="src" path="JPABasic_2/src/main/java"/>
+	<classpathentry kind="src" path="JPABasic_3/src/main/java"/>
+	<classpathentry kind="src" path="JPABasic_4/src/main/java"/>
+	<classpathentry kind="src" path="JPABasic_JPQL/src/main/java"/>
+	<classpathentry excluding="dao/" kind="src" path="MongoDBBasic_BookManager/src/main/java"/>
+	<classpathentry kind="src" path="MongoDBBasic_BookManager/src/main/java/dao"/>
+	<classpathentry kind="src" path="MybatisBasic/src/main/java"/>
+	<classpathentry kind="output" path="JPABasic_1/target/classes"/>
+</classpath>
