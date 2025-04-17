@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <form id="loginForm" action="">
+            <input id="domain" type="hidden" value="abc" />
+            <label for="userId">아이디</label><br />
+            <input id="userId" type="text" /><br />
+            <label for="password">패스워드</label><br />
+            <input id="password" type="password" /><br />
+        </form>
+        <br />
+        <input id="btnLogin" type="button" value="로그인" />
+        <hr />
+        <form id="registerForm" action="">
+            <label for="userName">이름</label><br />
+            <input id="userName" type="text" /><br />
+            <label for="userEmail">e-mail</label><br />
+            <input id="userEmail" type="email" /><br />
+            <label>성별</label><br />
+            <input id="male" type="radio" name="gender" value="M" /><label for="male">남</label>
+            <input id="female" type="radio" name="gender" value="F" checked /><label for="female">여</label><br />
+            <label>취미</label><br />
+            <input id="movie" type="checkbox" name="hobby" value="movie" />
+            <label for="movie">영화</label>
+            <input id="sport" type="checkbox" name="hobby" value="sport" checked />
+            <label for="sport">스포츠</label>
+            <input id="mung" type="checkbox" name="hobby" value="mung" />
+            <label for="mung">멍때리기</label>
+            <br />
+            <label for="major">전공</label>
+            <select name="major" id="major" multiple> <!-- multiple-->
+                <!-- multiple -->
+                <option value="CS">Computer Science</option>
+                <option value="HI" selected>History</option>
+                <option id="KL" value="KL">Korean Language</option>
+            </select>
+            <br />
+            <label for="desc">기타</label><br />
+            <textarea name="desc" id="desc" cols="30" rows="10"></textarea>
+        </form>
+        <br />
+        <input id="btnRegister" type="button" value="가입하기" />
+        <hr />
+        <form id="searchForm" action="">
+            <label for="searchWord">검색어</label>
+            <input id="searchWord" type="text" />
+            <input id="btnSearch" type="button" value="검색" />
+        </form>
+    </div>
+    <script>
+        // 이미 문서의 마지막에 script 를 넣고 있지만, 조금 더 안전한 ( dom 문서의 처리가 완료된 후 실행 ) 방법
+        window.onload = function(){
+            // login
+            document.querySelector("#btnLogin").onclick = function(){
+                console.log( document.querySelector("#domain").value );
+                console.log( document.querySelector("#userId").value );
+                console.log( document.querySelector("#password").value );
+            }
+            // register
+            document.querySelector("#btnRegister").onclick = function(){
+                // userName, userEmail
+                console.log( document.querySelector("#userName").value );
+                console.log( document.querySelector("#userEmail").value );
+                // radio
+                // 전체 radio 중 선택된 항목의 value
+                console.log( document.querySelector("input[name='gender']:checked").value );
+                // 개별 radio 항목에 대한 선택 여부
+                // if( document.querySelector("#male").checked ) console.log( "male checked")
+                // if( document.querySelector("input[name='gender'][value='F']").checked ) console.log( "female checked")
+                // checkbox ( 0 ~ 여러개 )
+                document.querySelectorAll("input[name='hobby']:checked").forEach ( el => console.log( el.value ) );
+                // select ( 1 개 )
+                // console.log( document.querySelector("#major option:checked").value );
+                // select ( 여러개 )
+                document.querySelectorAll("#major option:checked").forEach ( el => console.log( el.value ) );
+                // textarea
+                console.log( document.querySelector("#desc").value );
+            }
+            // search
+            document.querySelector("#btnSearch").onclick = function(){
+                console.log( document.querySelector("#searchWord").value );
+            }
+        }
+    </script>
+</body>
+</html>

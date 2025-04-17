@@ -1,0 +1,31 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ch01.dao.BookDao">
+    <select id="listBook" resultType="ch01.dto.BookDto">
+        select bookid bookId, bookname bookName, publisher, price from book;
+    </select>
+
+    <select id="detailBook" resultType="ch01.dto.BookDto" parameterType="int">
+        select bookid bookId, bookname bookName, publisher, price
+          from book
+        where bookId = #{bookId}
+    </select>
+
+    <insert id="insertBook" parameterType="ch01.dto.BookDto">
+        insert into book (bookid, bookname, publisher, price)
+         values (#{bookId}, #{bookName}, #{publisher}, #{price})
+    </insert>
+
+    <update id="updateBook" parameterType="ch01.dto.BookDto">
+        update book
+          set bookname = #{bookName},
+              publisher = #{publisher},
+              price = #{price}
+        where bookid = #{bookId}
+    </update>
+
+    <delete id="deleteBook" parameterType="ch01.dto.BookDto">
+        delete from book where bookid = #{bookId}
+    </delete>
+</mapper>

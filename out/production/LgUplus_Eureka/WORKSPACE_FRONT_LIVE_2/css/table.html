@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div {
+            display: inline;
+            border: 1px solid lightblue
+        }
+        span {
+            display: block;
+            border: 1px solid burlywood
+        }
+/*  인라인과 다른 점 : 폭이 모자른 경우 일부가 다음 행에 보이는 게 아니라 전체가 다음 행으로 이동함, width ,height 를 가질 수 있다 */
+        .ib {
+            display: inline-block;
+            border: 1px solid gainsboro;
+            width: 100px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div> 이것은 div 입니다.</div>
+    <div> 이것은 div 입니다.</div>
+    <div> 이것은 div 입니다.</div>
+    <div> 이것은 div 입니다.</div>
+    <div> 이것은 div 입니다.</div>
+    <div> 이것은 div 입니다.</div>
+    <hr>
+    <span> 이것은 span 입니다</span>
+    <span> 이것은 span 입니다</span>
+    <span> 이것은 span 입니다</span>
+    <span> 이것은 span 입니다</span>
+    <span> 이것은 span 입니다</span>
+    <span> 이것은 span 입니다</span>
+    <hr>
+    <span class="ib">이것은 span 임</span>
+    <span class="ib">이것은 span 임</span>
+    <span class="ib">이것은 span 임</span>
+    <span class="ib">이것은 span 임</span>
+    <span class="ib">이것은 span 임</span>
+    <span class="ib">이것은 span 임</span>
+</body>
+</html>
